@@ -13,18 +13,23 @@ try
         Console.WriteLine(string.Join(", ", line));
     }
 }
-catch(CsvHelper.HeaderValidationException ex) { Console.WriteLine("The file did not have the correct headers: Dependency, Item!"); }
+catch(CsvHelper.HeaderValidationException) { Console.WriteLine("The file did not have the correct headers: Dependency, Item!"); }
 catch (Exception ex) { Console.WriteLine($"An error occurred processing the result: {ex.Message}"); }
 
 
 string GetUserInput(string message)
 {
-    Console.WriteLine(message);
-    return Console.ReadLine();
+    var input = string.Empty;
+    while (string.IsNullOrEmpty(input))
+    {
+        Console.WriteLine($"{message}. Control-C to end.");
+        input = Console.ReadLine();
+    }
+    return input;
 }
 bool GetBoolInput(string message)
 {
     Console.WriteLine(message);
-    string userInput = Console.ReadLine()?.ToLower();
+    string? userInput = Console.ReadLine()?.ToLower();
     return userInput?.Contains("y") == true || userInput?.Contains("true") == true;
 }

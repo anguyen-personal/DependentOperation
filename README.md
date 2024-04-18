@@ -11,7 +11,7 @@ This input is a declared array of dependencies with the [0] index being the depe
  
 A simple input would be:
  
-var input = new string[,]
+`var input = new string[,]
 {
         //dependency    //item
         {"t-shirt",             "dress shirt"},
@@ -32,7 +32,7 @@ var input = new string[,]
         {"right sock",             "pants"},
         {"right shoe",            "overcoat"},
         {"t-shirt",    "suit jacket"}
-};
+};`
  
 In this example, it shows that they must put on their left sock before their pants. Also, 
 they must put on their pants before their belt.
@@ -70,7 +70,7 @@ Execution without arguments will prompt for filepath and hasHeader.
 ## CSV Sample files
 
 ### with no header
-t-shirt,dress shirt
+`t-shirt,dress shirt
 dress shirt,pants
 dress shirt,suit jacket
 tie,suit jacket
@@ -87,10 +87,10 @@ suit jacket,right shoe
 left shoe,overcoat
 right sock,pants
 right shoe,overcoat
-t-shirt,suit jacket
+t-shirt,suit jacket`
 
 ### with header 
-Dependency,Item             <-- NOTE: The header must be labeled Dependency and Item
+`Dependency,Item             <-- NOTE: The header must be labeled Dependency and Item
 t-shirt,dress shirt
 dress shirt,pants
 dress shirt,suit jacket
@@ -108,10 +108,10 @@ suit jacket,right shoe
 left shoe,overcoat
 right sock,pants
 right shoe,overcoat
-t-shirt,suit jacket
+t-shirt,suit jacket`
 
 ### with values in quotes
-"t-shirt","dress shirt"
+`"t-shirt","dress shirt"
 "dress shirt","pants"
 "dress shirt","suit jacket"
 "tie","suit jacket"
@@ -128,7 +128,7 @@ t-shirt,suit jacket
 "left shoe","overcoat"
 "right sock","pants"
 "right shoe","overcoat"
-"t-shirt","suit jacket"
+"t-shirt","suit jacket"`
 
 
 ## Validation

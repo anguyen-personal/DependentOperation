@@ -19,7 +19,7 @@ namespace DependentOperation.Models
             Item = item;
 
         }
-        public string Dependency { get; set; }
-        public string Item { get; set; }
+        public string Dependency { get; set; } = string.Empty;
+        public string Item { get; set; } = string.Empty;
     }
 }
