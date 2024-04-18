@@ -4,7 +4,7 @@ using System.Net.Http.Headers;
 try
 {
     var filename = args.Length >= 1 ? args[0] : GetUserInput("Please enter file name, including full path");
-    bool hasHeader = args.Length >= 2 ? Convert.ToBoolean(args[1]) : GetBoolInput("Does the file contain the headers 'Dependency' and 'Item'? (y/n) or (true/false)");
+    bool hasHeader = args.Length >= 2 ? Convert.ToBoolean(args[1]) : GetBoolInput("Does the file contain the headers 'Dependency' and 'Item'? (N/y)");
 
     var input = DependencyService.OpenCsvFile(filename, hasHeader);
     var order = DependencyService.CreateDependencyResult(input);
@@ -29,7 +29,9 @@ string GetUserInput(string message)
 }
 bool GetBoolInput(string message)
 {
+    var input = string.Empty;
     Console.WriteLine(message);
-    string? userInput = Console.ReadLine()?.ToLower();
-    return userInput?.Contains("y") == true || userInput?.Contains("true") == true;
+    input = Console.ReadLine()?.ToLower();
+    if(string.IsNullOrEmpty(input)) return false;
+    return input?.StartsWith("y") == true;
 }
