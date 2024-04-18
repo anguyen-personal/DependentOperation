@@ -72,27 +72,7 @@ Execution without arguments will prompt for filepath and hasHeader.
 ## CSV Sample files
 
 ### with no header
-`t-shirt,dress shirt
-dress shirt,pants
-dress shirt,suit jacket
-tie,suit jacket
-pants,suit jacket
-belt,suit jacket
-suit jacket,overcoat
-dress shirt,tie
-suit jacket,sun glasses
-sun glasses,overcoat
-left sock,pants
-pants,belt
-suit jacket,left shoe
-suit jacket,right shoe
-left shoe,overcoat
-right sock,pants
-right shoe,overcoat
-t-shirt,suit jacket`
-
-### with header 
-`Dependency,Item             <-- NOTE: The header must be labeled Dependency and Item
+```yaml
 t-shirt,dress shirt
 dress shirt,pants
 dress shirt,suit jacket
@@ -110,10 +90,35 @@ suit jacket,right shoe
 left shoe,overcoat
 right sock,pants
 right shoe,overcoat
-t-shirt,suit jacket`
+t-shirt,suit jacket
+```
+
+### with header 
+```yaml
+Dependency,Item             <-- NOTE: The header must be labeled Dependency and Item
+t-shirt,dress shirt
+dress shirt,pants
+dress shirt,suit jacket
+tie,suit jacket
+pants,suit jacket
+belt,suit jacket
+suit jacket,overcoat
+dress shirt,tie
+suit jacket,sun glasses
+sun glasses,overcoat
+left sock,pants
+pants,belt
+suit jacket,left shoe
+suit jacket,right shoe
+left shoe,overcoat
+right sock,pants
+right shoe,overcoat
+t-shirt,suit jacket
+```
 
 ### with values in quotes
-`"t-shirt","dress shirt"
+```yaml
+"t-shirt","dress shirt"
 "dress shirt","pants"
 "dress shirt","suit jacket"
 "tie","suit jacket"
@@ -130,7 +135,8 @@ t-shirt,suit jacket`
 "left shoe","overcoat"
 "right sock","pants"
 "right shoe","overcoat"
-"t-shirt","suit jacket"`
+"t-shirt","suit jacket"
+```
 
 
 ## Validation
