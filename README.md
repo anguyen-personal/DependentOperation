@@ -11,7 +11,8 @@ This input is a declared array of dependencies with the [0] index being the depe
  
 A simple input would be:
  
-`var input = new string[,]
+```yaml
+var input = new string[,]
 {
         //dependency    //item
         {"t-shirt",             "dress shirt"},
@@ -32,7 +33,8 @@ A simple input would be:
         {"right sock",             "pants"},
         {"right shoe",            "overcoat"},
         {"t-shirt",    "suit jacket"}
-};`
+};
+```
  
 In this example, it shows that they must put on their left sock before their pants. Also, 
 they must put on their pants before their belt.
